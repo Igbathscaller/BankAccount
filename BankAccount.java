@@ -32,5 +32,18 @@ public class BankAccount{
         }
     }
 
+    public boolean withdraw(double amount){
+        if (amount < 0 || balance - amount < 0){
+            return false;
+        }
+        else{
+            balance -= amount;
+            return true;
+        }
+    }
+
+    public String toString(){
+        return accountID + "\t" + balance;
+    }
 
 }
